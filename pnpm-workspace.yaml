@@ -1,0 +1,6 @@
+# Flatten node_modules to the root (npm-style) so the VS Code ESLint extension
+# can resolve eslint and its plugins. pnpm's strict layout only links direct deps
+# at the top level, and pnpm 10+ stopped public-hoisting eslint/prettier, so the
+# extension's require.resolve('eslint') from the project root fails and linting
+# stops working in the editor. A clean reinstall is needed for this to take effect.
+shamefullyHoist: true
