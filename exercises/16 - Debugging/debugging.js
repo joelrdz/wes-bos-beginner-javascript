@@ -5,26 +5,18 @@ const people = [
 ];
 
 people.forEach((person, index) => {
-  console.log(person);
-  if (person.name === 'Wes') {
-    console.error('Dumb name');
-    console.warn('Dumb name');
-  }
+  // console.groupCollapsed(`${person.name}`);
+  // console.log(person.country);
+  // console.log(person.cool);
+  // console.log('DONE!');
+  // console.groupEnd(`${person.name}`);
 });
 
-people.forEach((person, index) => {
-  console.groupCollapsed(`${person.name}`);
-  console.log(person.country);
-  console.log(person.cool);
-  console.log('DONE!');
-  console.groupEnd(`${person.name}`);
-});
-
-console.table(people);
+// console.table(people);
 
 // Console Methods
 
-// Callstack
+// Callstack, Stack Trace
 
 // Grabbing Elements
 
@@ -47,12 +39,12 @@ function doALotOfStuff() {
 }
 
 function doctorize(name) {
-  console.count(`running Doctorize for ${name}`);
+  // console.count(`running Doctorize for ${name}`);
   return `Dr. ${name}`;
 }
 
 function greet(name) {
-  doesntExist();
+  doesntExist(); // Cause an error
   return `Hello ${name}`;
 }
 
@@ -60,6 +52,13 @@ function go() {
   const name = doctorize(greet('Wes'));
   console.log(name);
 }
+
+function bootstrap() {
+  console.log('Starting the app!');
+  go();
+}
+
+// bootstrap();
 
 const button = document.querySelector('.bigger');
 button.addEventListener('click', (e) => {
